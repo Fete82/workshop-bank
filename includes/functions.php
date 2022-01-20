@@ -9,12 +9,12 @@ class Account {
         $this->accountNumber = $_accountNumber;
         $this->balance = $_balance;
     }
-    // Get Info
+    // GET INFO
     public function getAccountInfo() {
-        return "Account Number: <br> {$this->getAccountNumber()} <br> Account Balance: <br> {$this->getBalance()}";
+        return "<b>Account Number:</b><br>{$this->getAccountNumber()}<br><b>Account Balance:</b><br>{$this->getBalance()} USD";
     }
 
-    // Account Number Options
+    // Account Number set/get
     protected function setAccountNumber(int $_accountNumber) {
         $this->accountNumber = $_accountNumber;
     }
@@ -23,7 +23,7 @@ class Account {
         return $this->accountNumber;
 
     }
-    // Balance Options
+    // Balance set/get
     protected function setBalance(int $_balance) {
         $this->balance = $_balance;
     }
@@ -31,6 +31,17 @@ class Account {
     public function getBalance(): int {
         return $this->balance;
     }
+
+    // Deposit/Withdraw funds
+    public function withdraw($value) {
+        $this->balance -= $value;
+    }
+
+    public function deposit($value) {
+        $this->balance += $value;
+
+    }
+    
     
 
 }
