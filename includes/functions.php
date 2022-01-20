@@ -25,7 +25,7 @@ class Account {
     }
     
     public function getInfo() {
-        return "Jag är en $this->brand $this->model av årsmodell $this->model med registreringsnummer $this->plate <br>";
+        return "<br>";
     }
 
 }
