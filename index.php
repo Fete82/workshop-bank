@@ -1,12 +1,17 @@
 <?php
 
 require("includes/functions.php");
+require("includes/dump_it.php");
 
 $accounts = [];
 
-$account = new Account(8169-5 123 345 6, 40);
+$account = new Account(123456789, 10);
+array_push($accounts, $account);
+
+$account = new Account(987654321, 0);
+array_push($accounts, $account);
+
 
 foreach ($accounts as $account)
-    echo "<h2>Account List</h2>";
     echo "<p>$account->getAccountInfo()</p>";
     echo "<br>";

@@ -9,23 +9,28 @@ class Account {
         $this->accountNumber = $_accountNumber;
         $this->balance = $_balance;
     }
+    // Get Info
+    public function getAccountInfo() {
+        return "Account Number: <br> {$this->getAccountNumber()} <br> Account Balance: <br> {$this->getBalance()}";
+    }
+
     // Account Number Options
-    public function setAccountNumber(int $_accountNumber) {
+    protected function setAccountNumber(int $_accountNumber) {
+        $this->accountNumber = $_accountNumber;
     }
 
     public function getAccountNumber() {
+        return $this->accountNumber;
 
     }
     // Balance Options
-    public function setBalance(int $_balance) {
+    protected function setBalance(int $_balance) {
+        $this->balance = $_balance;
     }
 
-    public function getBalance() {
-
+    public function getBalance(): int {
+        return $this->balance;
     }
     
-    public function getAccountInfo() {
-        return "Account Number: {$this->getAccountNumber()} <br> Account Balance: {$this->getBalance()}";
-    }
 
 }
