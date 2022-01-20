@@ -8,7 +8,7 @@ $accounts = [];
 $account = new Account(123456789, 10);
 $account->deposit(10);
 //Rekt
-$account->withdraw(5000);
+$account->withdraw(400000);
 array_push($accounts, $account);
 
 $account = new Account(987654321, 0);
