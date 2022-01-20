@@ -4,7 +4,7 @@ class Account {
     protected $accountNumber;
     protected int $balance = 0;
 
-    public function __construct(int $_accountNumber, int $_balance)
+    public function __construct($_accountNumber, int $_balance)
     {
         $this->accountNumber = $_accountNumber;
         $this->balance = $_balance;
@@ -24,8 +24,8 @@ class Account {
 
     }
     
-    public function getInfo() {
-        return "<br>";
+    public function getAccountInfo() {
+        return "Account Number: {$this->getAccountNumber()} <br> Account Balance: {$this->getBalance()}";
     }
 
 }
