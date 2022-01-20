@@ -5,12 +5,12 @@ require("includes/dump_it.php");
 
 $accounts = [];
 
-$account = new Account(123456789, 10);
+$account = new Account(123456789, 10, "Edvin Lindahl");
 $account->deposit(10);
 $account->withdraw(400000);
 array_push($accounts, $account);
 
-$account = new Account(987654321, 0);
+$account = new Account(987654321, 0, "Joakim von Anka");
 $account->deposit(4000);
 array_push($accounts, $account);
 
