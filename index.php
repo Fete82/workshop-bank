@@ -11,7 +11,10 @@ array_push($accounts, $account);
 $account = new Account(987654321, 0);
 array_push($accounts, $account);
 
+//Dumps info on top, because clarity.
+Dump::pre($accounts);
 
-foreach ($accounts as $account)
+foreach ($accounts as $account) {
     echo "<p>$account->getAccountInfo()</p>";
     echo "<br>";
+}
