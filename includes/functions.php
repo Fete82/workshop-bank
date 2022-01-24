@@ -35,8 +35,10 @@ class Account {
     }
 
     // Deposit/Withdraw funds
-    public function withdraw($value) {
+    public function withdraw($value, $comment) {
+        $this->comment = $comment;
         $this->balance -= $value;
+        
     }
 
     public function deposit($value) {

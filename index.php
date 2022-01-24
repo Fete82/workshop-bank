@@ -7,7 +7,7 @@ $accounts = [];
 
 $account = new Account(123456789, 10, "Edvin Lindahl");
 $account->deposit(10);
-$account->withdraw(400000);
+$account->withdraw(400000, "Margin called, fleeing to mexico on credit!");
 array_push($accounts, $account);
 
 $account = new Account(987654321, 0, "Joakim von Anka");
